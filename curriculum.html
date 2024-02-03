@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Alisson Curay</title>
+    <style>
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            margin: 30px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        video {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        p.video-description {
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: #868e96;
+            margin-top: 40px;
+        }
+
+        main {
+            outline: none;
+        }
+
+        nav {
+            outline: none;
+        }
+
+        img[tabindex="0"] {
+            outline: none;
+        }
+
+        section[tabindex="0"] {
+            outline: none;
+        }
+
+        [role="navigation"] {
+            outline: none;
+        }
+
+        .no-underline {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav role="navigation" tabindex="0" aria-label="Encabezado">
+            <h1>Currículum Alisson Curay</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section tabindex="0" aria-label="Información Personal">
+            <figure>
+                <img src="foto.jpg" alt="Fotografía de Alisson Curay" aria-describedby="photo-description" tabindex="0">
+            </figure>
+            <ul>
+                <li tabindex="0" aria-label="Fecha de Nacimiento">
+                    Fecha de Nacimiento:
+                    <a href='5 de Julio de 1999' class="no-underline">5 de Julio de 1999</a>
+                </li>
+                <li tabindex="0" aria-label="Dirección">
+                    Dirección:
+                    <a href='La Santiago' class="no-underline">La Santiago</a>
+                </li>
+                <li tabindex="0" aria-label="Email">Email: <a href="mailto:alisson.curay@epn.edu.ec" class="no-underline">alisson.curay@epn.edu.ec</a></li>
+                <li tabindex="0" aria-label="Teléfono">
+                    Teléfono:
+                    <a href='tel:+593995571184' class="no-underline">0995571184</a>
+                </li>
+            </ul>
+        </section>
+
+        <section tabindex="0" aria-label="Estudios">
+            <h2>Estudios</h2>
+            <table aria-live="polite" aria-atomic="true">
+                <tbody>
+                    <tr>
+                        <th scope="row" tabindex="0">Título de Estudio</th>
+                        <td tabindex="0">Ingeniería de Software</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" tabindex="0">Institución Educativa</th>
+                        <td tabindex="0">Escuela Politécnica Nacional</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" tabindex="0">Estado de la formación</th>
+                        <td tabindex="0">Actualmente cursando</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>      
+          
+        <section tabindex="0" aria-label="Habilidades" aria-live="polite" aria-atomic="true">
+            <h2>Habilidades</h2>
+            <p tabindex="0">Curso de Excel - Nivel Principiante a Avanzado</p>
+        </section>
+        
+
+        <section tabindex="0" aria-label="Video">
+            <h2>Video</h2>
+            <p tabindex="0" aria-live="assertive" aria-atomic="true">
+                Controles del video: usa Tab para navegar, Barra espaciadora para reproducir-pausar, Flecha izquierda-derecha para adelantar-retroceder.
+            </p>
+            <video controls tabindex="0" aria-describedby="video-description" id="currVideo">
+                <source src="videoSubtitulado.mp4" type="video/mp4">
+
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+        <script>
+            const videoElement = document.getElementById('currVideo');
+            
+            videoElement.addEventListener('keydown', function (e) {
+                if (e.code === 'Space') {
+                    e.preventDefault();
+                    if (videoElement.paused) {
+                        videoElement.play();
+                    } else {
+                        videoElement.pause();
+                    }
+                }
+            });
+        </script>
+
+        <section tabindex="0" aria-label="Referencias Personales">
+            <h2>Referencias Personales</h2>
+            <ul>
+                <li tabindex="0" aria-label="Nombre de Referencia">
+                    Nombre de Referencia:
+                    <a href='Tatiana Pogo' class="no-underline">Tatiana Pogo</a>
+                </li>
+                <li tabindex="0" aria-label="Email de Referencia">Email de Referencia: <a href="mailto:tattipogo@gmail.com" class="no-underline">tattipogo@gmail.com</a></li>
+                <li tabindex="0" aria-label="Teléfono de Referencia">
+                    Teléfono de Referencia:
+                    <a href='tel:+593986858353' class="no-underline">0986858353</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Alisson Curay
+    </footer>
+
+</body>
+
+</html>
